@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsome Puppy Shop 🐾</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-paw"></i>
+                <span>Pawsome Puppies</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#puppies">Puppies</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Furry Friend! 🐕</h1>
+            <p>Adorable puppies looking for their forever homes. Each one is special and ready to bring joy to your life!</p>
+            <a href="#puppies" class="cta-button">Meet Our Puppies</a>
+        </div>
+        <div class="hero-image">
+            <div class="floating-paw"></div>
+        </div>
+    </section>
+
+    <!-- Puppies Section -->
+    <section id="puppies" class="puppies-section">
+        <div class="container">
+            <h2>Our Adorable Puppies</h2>
+            <p class="section-subtitle">Each puppy is unique and special in their own way</p>
+            
+            <div class="puppies-grid">
+                <div class="puppy-card" data-puppy="golden">
+                    <div class="puppy-image">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=400&fit=crop&crop=face" alt="Golden Retriever Puppy">
+                        <div class="puppy-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="puppy-info">
+                        <h3>Sunny</h3>
+                        <p class="breed">Golden Retriever</p>
+                        <p class="age">8 weeks old</p>
+                        <p class="description">A sweet and gentle golden retriever puppy who loves to play fetch and cuddle.</p>
+                        <div class="puppy-features">
+                            <span class="feature">Friendly</span>
+                            <span class="feature">Playful</span>
+                            <span class="feature">Smart</span>
+                        </div>
+                        <button class="adopt-btn" onclick="showPuppyDetails('golden')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="puppy-card" data-puppy="labrador">
+                    <div class="puppy-image">
+                        <img src="https://images.unsplash.com/photo-1605897472359-2481d0e3d0e7?w=400&h=400&fit=crop&crop=face" alt="Labrador Puppy">
+                        <div class="puppy-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="puppy-info">
+                        <h3>Choco</h3>
+                        <p class="breed">Labrador Retriever</p>
+                        <p class="age">10 weeks old</p>
+                        <p class="description">An energetic chocolate lab who adores water and is always ready for adventure.</p>
+                        <div class="puppy-features">
+                            <span class="feature">Energetic</span>
+                            <span class="feature">Water-loving</span>
+                            <span class="feature">Loyal</span>
+                        </div>
+                        <button class="adopt-btn" onclick="showPuppyDetails('labrador')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="puppy-card" data-puppy="poodle">
+                    <div class="puppy-image">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop&crop=face" alt="Poodle Puppy">
+                        <div class="puppy-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="puppy-info">
+                        <h3>Fluffy</h3>
+                        <p class="breed">Miniature Poodle</p>
+                        <p class="age">12 weeks old</p>
+                        <p class="description">A clever and elegant poodle puppy with a curly coat and charming personality.</p>
+                        <div class="puppy-features">
+                            <span class="feature">Intelligent</span>
+                            <span class="feature">Elegant</span>
+                            <span class="feature">Hypoallergenic</span>
+                        </div>
+                        <button class="adopt-btn" onclick="showPuppyDetails('poodle')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="puppy-card" data-puppy="beagle">
+                    <div class="puppy-image">
+                        <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=400&h=400&fit=crop&crop=face" alt="Beagle Puppy">
+                        <div class="puppy-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="puppy-info">
+                        <h3>Bella</h3>
+                        <p class="breed">Beagle</p>
+                        <p class="age">9 weeks old</p>
+                        <p class="description">A curious beagle puppy with a great sense of smell and a love for exploration.</p>
+                        <div class="puppy-features">
+                            <span class="feature">Curious</span>
+                            <span class="feature">Friendly</span>
+                            <span class="feature">Great Nose</span>
+                        </div>
+                        <button class="adopt-btn" onclick="showPuppyDetails('beagle')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="puppy-card" data-puppy="bulldog">
+                    <div class="puppy-image">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=400&fit=crop&crop=face" alt="Bulldog Puppy">
+                        <div class="puppy-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="puppy-info">
+                        <h3>Winston</h3>
+                        <p class="breed">English Bulldog</p>
+                        <p class="age">11 weeks old</p>
+                        <p class="description">A laid-back bulldog puppy with a wrinkly face and a heart of gold.</p>
+                        <div class="puppy-features">
+                            <span class="feature">Calm</span>
+                            <span class="feature">Loving</span>
+                            <span class="feature">Wrinkly</span>
+                        </div>
+                        <button class="adopt-btn" onclick="showPuppyDetails('bulldog')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="puppy-card" data-puppy="husky">
+                    <div class="puppy-image">
+                        <img src="https://images.unsplash.com/photo-1547407139-3c921a0b0b7f?w=400&h=400&fit=crop&crop=face" alt="Husky Puppy">
+                        <div class="puppy-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="puppy-info">
+                        <h3>Luna</h3>
+                        <p class="breed">Siberian Husky</p>
+                        <p class="age">10 weeks old</p>
+                        <p class="description">A beautiful husky puppy with striking blue eyes and a wild spirit.</p>
+                        <div class="puppy-features">
+                            <span class="feature">Beautiful</span>
+                            <span class="feature">Energetic</span>
+                            <span class="feature">Blue Eyes</span>
+                        </div>
+                        <button class="adopt-btn" onclick="showPuppyDetails('husky')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Puppy Shop</h2>
+                    <p>We're passionate about connecting loving families with adorable puppies. Each puppy in our care receives the best nutrition, veterinary care, and lots of love and attention.</p>
+                    <p>Our puppies come from responsible breeders and are raised in a loving environment. We ensure they're healthy, socialized, and ready to become part of your family.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Loving Care</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Health Guaranteed</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-home"></i>
+                            <span>Family Ready</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-paw"></i>
+                        <p>Happy Puppies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Ready to meet your new best friend? Contact us today!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Puppy Lane, Doggy Town, DT 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>(555) 123-PAWS</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@pawsomepuppies.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-paw"></i>
+                        <span>Pawsome Puppies</span>
+                    </div>
+                    <p>Bringing joy and love to families through adorable puppies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#puppies">Puppies</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pawsome Puppies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Puppy Details Modal -->
+    <div id="puppyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
